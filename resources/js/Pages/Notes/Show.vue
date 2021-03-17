@@ -10,7 +10,7 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-1">
-                        <div class="p3-4 sm:px0">
+                        <div class="px-4 sm:px0">
                             <h3 class="text-lg text-gray-900">
                                 Detalle de una nota
                             </h3>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">
-                        <div class="shadow bg-white md:roundend-md p-4">
+                        <div class="shadow bg-white md:rounded-md p-4">
                             <p>{{ note.content }}</p>
                             <hr class="my-6" />
                             <inertia-link
