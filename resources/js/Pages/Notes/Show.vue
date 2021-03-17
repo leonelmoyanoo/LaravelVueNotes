@@ -25,7 +25,7 @@
                             <hr class="my-6" />
                             <inertia-link
                                 :href="route('notes.index')"
-                            >Crear</inertia-link>
+                            >Volver</inertia-link>
                         </div>
                     </div>
                 </div>
