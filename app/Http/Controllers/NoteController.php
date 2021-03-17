@@ -27,7 +27,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Notes/Create');
     }
 
     /**
@@ -38,7 +38,14 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'excerpt' => 'required',
+            'content' => 'required',
+        ]);
+
+        $node = Note::create($request->all());
+
+        return redirect()->route('notes.edit', $node->id);
     }
 
     /**
@@ -73,8 +80,8 @@ class NoteController extends Controller
     public function update(Request $request, Note $note)
     {
         $request->validate([
-            'excerpt'=>'required',
-            'content'=>'required',
+            'excerpt' => 'required',
+            'content' => 'required',
         ]);
 
         $note->update($request->all());
